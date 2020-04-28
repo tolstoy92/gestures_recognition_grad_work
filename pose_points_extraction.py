@@ -18,10 +18,6 @@ while True:
     h, w, _ = img.shape
     for pose in poses:
         for pt in pose:
-            # x, y = pt.intPx
-            # # x, y = x * w, y * h
-            # x, y = int(x), int(y)
-            # if x and y:
             cv2.circle(img, pt.int_xy, 5, (100, 0, 255), -1)
 
     end_time = time()
