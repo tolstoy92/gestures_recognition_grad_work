@@ -1,8 +1,8 @@
 ### Static and dynamic gestures recognition using machine learning approaches.
 For pose detection [OpenPose Library](https://github.com/CMU-Perceptual-Computing-Lab/openpose) is used.
 
-Pose format:
-<img src="readme_data/keypoints_pose_25.png" alt="drawing" width="200"/>
+Pose format:<br>
+<img src="readme_data/keypoints_pose_25.png" alt="drawing" width="400"/>
 
 
 
