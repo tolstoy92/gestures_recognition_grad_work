@@ -2,8 +2,7 @@
 For pose detection [OpenPose Library](https://github.com/CMU-Perceptual-Computing-Lab/openpose) is used.
 
 Pose format:
-![](https://github.com/tolstoy92/gestures_recognition_grad_work/blob/master/readme_data/keypoints_pose_25.png?raw=true)
-
+<img src="readme_data/keypoints_pose_25.png" alt="drawing" width="200"/>
 
 
 
