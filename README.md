@@ -1,8 +1,8 @@
 ###Static and dynamic gestures recognition using machine learning approaches.
 
 Pose format:
-![](
-https://github.com/CMU-Perceptual-Computing-Lab/openpose/raw/master/doc/media/keypoints_pose_25.png){:height="20%" width="20%"}
+![alt](./readme_data/keypoints_pose_25.png | width=100)
+
 
 ####databases
 [static gestures videos](https://yadi.sk/d/jDZkoxHzegaF5g)
