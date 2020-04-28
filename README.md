@@ -2,7 +2,7 @@
 
 Pose format:
 ![](
-https://github.com/CMU-Perceptual-Computing-Lab/openpose/raw/master/doc/media/keypoints_pose_25.png) {:height="20%" width="20%"}
+https://github.com/CMU-Perceptual-Computing-Lab/openpose/raw/master/doc/media/keypoints_pose_25.png){:height="20%" width="20%"}
 
 ####databases
 [static gestures videos](https://yadi.sk/d/jDZkoxHzegaF5g)
