@@ -1,14 +1,15 @@
-###Static and dynamic gestures recognition using machine learning approaches.
+### Static and dynamic gestures recognition using machine learning approaches.
 
 Pose format:
-![alt](./readme_data/keypoints_pose_25.png | width=100)
+![](./readme_data/keypoints_pose_25.png =100x)
 
 
-####databases
+
+#### databases
 [static gestures videos](https://yadi.sk/d/jDZkoxHzegaF5g)
 
 
-####Approaches to realize:
+#### Approaches to realize:
 
 - k nearest neighbor
 - support vector machine
