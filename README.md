@@ -3,7 +3,7 @@ For pose detection [OpenPose Library](
 https://github.com/CMU-Perceptual-Computing-Lab/openpose) ([arxiv](https://arxiv.org/abs/1812.08008)) is used.
 
 ## Pose format:<br>
-<img src="readme_data/keypoints_pose_25.png" alt="pose format" width="400"/>
+<img align="center" src="readme_data/keypoints_pose_25.png" alt="pose format" width="400"/>
 
 ## Databases
 [static gestures videos](https://yadi.sk/d/jDZkoxHzegaF5g)
