@@ -1,10 +1,6 @@
 import cv2
 
 
-from src.image_objects.Point import Point
-from src.image_objects.Pose import Pose
-
-
 def draw_point(img, point, size=5, color=(255, 0, 100)):
     cv2.circle(img, point.int_xy, size, color, -1)
 
@@ -40,10 +36,13 @@ POSE_LINES_COLORS = {(0, 1): (140, 255, 0),
 
 
 def draw_pose(img, pose):
+    right_side = True  # right and left side are red and green (green and red)
     for points_idxs, line_color in POSE_LINES_COLORS.items():
+        right_side = not right_side
         idx1, idx2 = points_idxs
         pt1, pt2 = pose.points[idx1], pose.points[idx2]
         if all(pt1.int_xy) and all(pt2.int_xy):
             draw_line(img, pt1, pt2, color=line_color)
-            draw_point(img, pt1, color=(0, 0, 0))
-            draw_point(img, pt2, color=(0, 0, 0))
+            point_color = (0, 255, 0) if right_side else (0, 0, 255)
+            draw_point(img, pt1, color=point_color)
+            draw_point(img, pt2, color=point_color)
