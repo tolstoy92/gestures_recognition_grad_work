@@ -1,6 +1,6 @@
 # Static and dynamic gestures recognition using machine learning approaches.
-For pose detection [OpenPose Library](
-https://github.com/CMU-Perceptual-Computing-Lab/openpose) ([arxiv](https://arxiv.org/abs/1812.08008)) is used.
+For pose detection [__OpenPose__](
+https://github.com/CMU-Perceptual-Computing-Lab/openpose) library is used.
 
 ## Pose format:<br>
 <p align="center">

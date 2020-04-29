@@ -2,6 +2,7 @@ import cv2
 from time import time
 
 from src.PoseExtractor import PoseExtractor
+from src.visualization import draw_pose
 
 
 cap = cv2.VideoCapture(0)
@@ -15,10 +16,12 @@ while True:
 
     start_time = time()
     poses = pose_extractor.extract_poses_from_image(img)
-    h, w, _ = img.shape
     for pose in poses:
-        for pt in pose:
-            cv2.circle(img, pt.int_xy, 5, (100, 0, 255), -1)
+        draw_pose(img, pose)
+    # h, w, _ = img.shape
+    # for pose in poses:
+    #     for pt in pose:
+    #         cv2.circle(img, pt.int_xy, 5, (100, 0, 255), -1)
 
     end_time = time()
     fps = round(1 / (end_time - start_time), 2)

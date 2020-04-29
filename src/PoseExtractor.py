@@ -1,6 +1,7 @@
 import os
 import sys
 from src.image_objects.Point import Point
+from src.image_objects.Pose import Pose
 
 
 openpose_path = "/home/user/Soft/openpose"
@@ -22,7 +23,8 @@ class PoseExtractor:
     def extract_poses_from_image(self, img):
         self.__update_open_pose_datum(img)
         raw_coordinates = self.__get_poses()
-        poses = [self.__raw_coordinates_to_points(pose) for pose in raw_coordinates]
+        poses_points = [self.__raw_coordinates_to_points(pose) for pose in raw_coordinates]
+        poses = [Pose(pose_points) for pose_points in poses_points]
         return poses
 
     def __update_open_pose_datum(self, img):
