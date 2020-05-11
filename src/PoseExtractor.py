@@ -1,5 +1,7 @@
 import os
 import sys
+import numpy as np
+
 from src.image_objects.Point import Point
 from src.image_objects.Pose import Pose
 
@@ -23,16 +25,30 @@ class PoseExtractor:
     def extract_poses_from_image(self, img):
         self.__update_open_pose_datum(img)
         raw_coordinates = self.__get_poses()
-        poses_points = [self.__raw_coordinates_to_points(pose) for pose in raw_coordinates]
-        poses = [Pose(pose_points) for pose_points in poses_points]
-        return poses
+        try:
+            if len(raw_coordinates):
+                poses_points = [self.__raw_coordinates_to_points(pose) for pose in raw_coordinates]
+                poses = [Pose(pose_points) for pose_points in poses_points]
+                return poses
+            else:
+                return []
+        except:
+            print(type(raw_coordinates))
+            raise ValueError()
 
     def __update_open_pose_datum(self, img):
         self.__datum.cvInputData = img
         self.__open_pose_wrapper.emplaceAndPop([self.__datum])
 
     def __get_poses(self):
-        return self.__datum.poseKeypoints
+        poses = self.__datum.poseKeypoints
+        if not isinstance(poses, (np.ndarray, np.array)):
+            return []
+        else:
+            if len(poses.shape) > 1:
+                return poses
+            else:
+                return []
 
     @staticmethod
     def __raw_coordinates_to_points(pose):
