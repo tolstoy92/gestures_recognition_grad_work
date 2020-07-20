@@ -2,7 +2,7 @@ import os
 import cv2
 import numpy as np
 from time import time
-from keras.models import model_from_json
+from tensorflow.keras.models import model_from_json
 
 
 json_file = open('models/nn/model.json', 'r')
@@ -18,6 +18,9 @@ labels_dict = {"hands_down": 0,
                "hands_down_small": 4,
                "hads_down_up": 5,
                "hands_to_sides": 6}
+
+
+
 
 
 class GesturesChecker:
